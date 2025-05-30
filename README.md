@@ -1,63 +1,100 @@
-Predicting Instagram Hashtag Frequency for #mentalhealth Using LSTM
-Project Overview
-This project focuses on forecasting the future usage frequency of a single Instagram hashtag — #mentalhealth — based on its historical daily frequency data. Using an LSTM (Long Short-Term Memory) neural network, the model predicts how often the hashtag will be used on the next day, leveraging time-series analysis.
+# **Predicting Instagram Hashtag Frequency Using LSTM**
 
-What This Project Does NOT Do
-It does not predict which hashtags will trend or identify new popular hashtags.
+---
 
-It does not classify or cluster different hashtag types.
+## **Project Overview**
 
-The scope is limited to time-series forecasting of one hashtag’s frequency.
+This project focuses on **predicting the future usage frequency of a specific Instagram hashtag** — specifically **#mentalhealth** — using time-series forecasting with an LSTM (Long Short-Term Memory) neural network.
 
-Why This Approach?
-Instagram hashtag trends can be volatile and influenced by many external factors. However, for specific hashtags like #mentalhealth, historical usage patterns can provide valuable insight into near-future behavior. This project demonstrates how to leverage LSTM neural networks to capture temporal dependencies in usage data and generate short-term forecasts.
+> **Note:**  
+> We are **not** predicting *which* hashtags will trend next. Instead, we predict *how often* one particular hashtag (#mentalhealth) will be used the next day based on its past usage data.
 
-Dataset
-Daily frequency counts of #mentalhealth hashtag usage collected over a period.
+---
 
-Data is preprocessed and normalized before feeding into the model.
+## **Why This Project?**
 
-Model Architecture
-LSTM layer with 64 units to capture temporal patterns.
+- Track public interest and conversations around mental health on Instagram.  
+- Help content creators and marketers plan campaigns effectively.  
+- Analyze engagement patterns and anticipate hashtag popularity.
 
-Followed by a Dense output layer to predict the next day’s frequency.
+---
 
-Mean Squared Error (MSE) used as the loss function for regression.
+## **How It Works**
 
-How to Use
-Prepare time-series data of hashtag usage frequencies.
+1. **Data Preparation:**  
+   Collect historical daily frequency data of the #mentalhealth hashtag.
 
-Normalize data.
+2. **Sequence Creation:**  
+   Create input sequences of 7 consecutive days’ data to predict the 8th day.
 
-Create sequences of length 7 (past 7 days) to predict the 8th day.
+3. **Model Architecture:**  
+   Train an LSTM neural network to learn temporal patterns in the data.
 
-Train the LSTM model on the sequences.
+4. **Prediction:**  
+   Use the trained model to forecast the hashtag’s usage frequency for the next day.
 
-Use the model to predict next-day hashtag frequencies.
+---
 
-Results
-Model outputs predicted numerical values representing estimated hashtag counts.
+## **Tech Stack**
 
-Can be used to monitor and anticipate short-term shifts in hashtag usage trends.
+- **Python**  
+- **TensorFlow/Keras** — For building and training the LSTM model  
+- **NumPy & Pandas** — For data processing  
+- **Matplotlib/Seaborn** — For visualization  
+- **Google Colab** — Cloud-based training environment
 
-Tech Stack
-Python 3.x
+---
 
-TensorFlow / Keras
+## **Usage**
 
-NumPy, Pandas, Scikit-learn (for preprocessing and splitting data)
+1. Clone this repository  
+2. Prepare your dataset with daily hashtag frequencies  
+3. Run the training notebook or script to train the model  
+4. Use the trained model to predict future hashtag frequency
 
-Future Work
-Extend model to predict multiple hashtags simultaneously.
+---
 
-Incorporate external factors (events, news) for improved accuracy.
+## **Project Structure**
 
-Build a trend discovery system to identify emerging hashtags.
+/data
 
-License
-MIT License © 2025 Uday Trivedi
+hashtag_frequency.csv # Time-series data of hashtag counts
+/model
 
-Contact
-For questions or collaboration, reach out at [your-email@example.com]
+lstm_model.keras # Saved LSTM model file
+/notebooks
+
+training_and_prediction.ipynb # Notebook for training and testing
+README.md # Project description and instructions
 
 
+---
+
+## **Future Enhancements**
+
+- Extend to multiple hashtags prediction simultaneously  
+- Implement hashtag trend discovery (predict which hashtags will trend)  
+- Deploy as a web app or API for real-time predictions
+
+---
+
+## **Contributing**
+
+Contributions, issues, and feature requests are welcome! Feel free to fork and submit pull requests.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License.
+
+---
+
+## **Author**
+
+Uday Trivedi — Student at VIT Chennai  
+Contact: [Your Email or LinkedIn]
+
+---
+
+**Thank you for your interest in this project!**
