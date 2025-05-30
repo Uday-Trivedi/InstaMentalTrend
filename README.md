@@ -93,7 +93,7 @@ This project is licensed under the MIT License.
 ## **Author**
 
 Uday Trivedi — Student at VIT Chennai  
-Contact: [Your Email or LinkedIn]
+Contact: udaytrivedi0012@gmail.com
 
 ---
 
